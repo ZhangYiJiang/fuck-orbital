@@ -2,7 +2,7 @@
 
 namespace App;
 
-use app\Exceptions\TokenExpiredException;
+use App\Exceptions\TokenExpiredException;
 use Collective\Html\Eloquent\FormAccessible;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Mail\Message;
@@ -53,7 +53,7 @@ class Fuck extends Model
     {
         if (empty($token) || ! hash_equals($token, $this->token)) {
             abort(403);
-        } else if ($this->token_updated->diffInMinutes() < 30) {
+        } else if ($this->token_updated->diffInMinutes() > 30) {
             throw new TokenExpiredException($this);
         }
     }

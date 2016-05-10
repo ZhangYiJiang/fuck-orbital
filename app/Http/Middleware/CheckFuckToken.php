@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\Fuck;
 use Closure;
 
 class CheckFuckToken
@@ -16,7 +15,7 @@ class CheckFuckToken
      */
     public function handle($request, Closure $next)
     {
-        $request->fuck->checkToken($request->input('token'));
+        $request->route('fuck')->checkToken($request->input('token'));
         return $next($request);
     }
 }

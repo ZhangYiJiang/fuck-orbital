@@ -14,6 +14,7 @@
 @endsection
 
 @section('content')
+  @include('components.success')
   <h1>Latest Fucks</h1>
   @each('fuck.single', $fucks, 'fuck')
 @endsection

@@ -9,5 +9,6 @@
 
 
 @section('content')
+  @include('components.success')
   @include('fuck.single')
 @endsection
