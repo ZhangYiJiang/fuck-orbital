@@ -16,9 +16,14 @@ class CreateFucksTable extends Migration
             $table->increments('id');
             $table->string('email'); 
             $table->string('name')->nullable();
-            $table->text('message');
-            $table->string('delete_token', 100);
-            $table->timestamp('token_updated');
+
+            $table->text('fuck');
+            $table->text('fuck_rendered');
+
+            $table->string('token', 100)->nullable();
+            $table->boolean('confirmed')->default('false');
+
+            $table->timestamp('token_updated')->nullable();
             $table->timestamps();
         });
     }

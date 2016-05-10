@@ -25,3 +25,12 @@ Route::group(['prefix' => 'admin'], function(){
 });
 
 Route::get('new', 'FuckController@create');
+Route::post('new', 'FuckController@store');
+
+Route::get('{fuck}/confirm', 'FuckController@confirm');
+Route::get('{fuck}/edit', 'FuckController@edit');
+Route::post('{fuck}/edit', 'FuckController@update');
+Route::get('{fuck}/delete', 'FuckController@delete');
+
+Route::get('{fuck}', 'FuckController@show');
+

@@ -2116,11 +2116,13 @@ input[type="button"].btn-block {
 body.home > div.container-fluid > header h1 {
   font-size: 20px;
   text-align: center;
-  line-height: 1; }
+  line-height: 1;
+  font-weight: bold; }
 
 body.home > div.container-fluid > header .finger {
   display: block;
-  font-size: 300px; }
+  font-size: 300px;
+  font-weight: normal; }
   body.home > div.container-fluid > header .finger:hover {
     text-decoration: none; }
 

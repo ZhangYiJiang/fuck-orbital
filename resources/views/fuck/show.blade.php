@@ -1,7 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: zhang
- * Date: 10/5/16
- * Time: 12:20 PM
- */
+@extends('layouts.app')
+
+@section('vars')
+  <?php
+    $pageTitle = 'Fuck #' . $fuck->id;
+    $bodyClass = 'fuck';
+  ?>
+@endsection
+
+

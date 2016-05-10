@@ -5,11 +5,13 @@ body.home {
       font-size: 20px;
       text-align: center;
       line-height: 1;
+      font-weight: bold;
     }
 
     .finger {
       display: block;
       font-size: 300px;
+      font-weight: normal;
 
       &:hover {
         text-decoration: none;
