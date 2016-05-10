@@ -48,7 +48,7 @@ class FuckController extends Controller
         $fuck->update($request->only(['name', 'fuck']));
         return redirect()
             ->action('FuckController@show', [$fuck])
-            ->with('success', "Your fuck is has been updated!");
+            ->with('success', "Your fuck has been updated!");
     }
 
     public function token(Fuck $fuck)
@@ -56,8 +56,8 @@ class FuckController extends Controller
         $fuck->sendTokenEmail();
         return redirect()
             ->action('FuckController@show', [$fuck])
-            ->with('success', "An email has been sent to you. 
-                Use the links in them to edit/delete your fuck");
+            ->with('success', "An email has been sent to you. Use the links in it to 
+                edit/delete your fuck - but hurry, because the token expires pretty quickly");
     }
 
     public function delete(Fuck $fuck)
