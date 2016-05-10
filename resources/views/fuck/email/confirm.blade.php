@@ -3,7 +3,7 @@
 <p>Fuck #{{ $fuck->id }}<br>
   Name: {{ $fuck->name }}</p>
 
-{{ $fuck->fuck_rendered }}
+{!! $fuck->fuck_rendered !!}
 
 <p>If that is indeed you, please confirm this by clicking on this link:
   <a href="{{ $fuck->link('confirm') }}">{{ $fuck->link('confirm') }}</a></p>

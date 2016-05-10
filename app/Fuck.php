@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Collective\Html\Eloquent\FormAccessible;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Mail\Message;
 use Markdown;
@@ -9,8 +10,10 @@ use Mail;
 
 class Fuck extends Model
 {
+    use FormAccessible;
+
     protected $casts = [
-        'visible' => 'boolean',
+        'confirmed' => 'boolean',
     ];
 
     protected $dates = ['token_update', ];
@@ -19,7 +22,7 @@ class Fuck extends Model
 
     public function link($action)
     {
-        return action('FuckController@'.$action);
+        return action('FuckController@'.$action, [$this]);
     }
 
     public function refreshToken()
@@ -50,6 +53,11 @@ class Fuck extends Model
         return $query->where('confirmed', $confirmed);
     }
 
+    public function scopeChronological($query, $direction = 'DESC')
+    {
+        return $query->orderBy('created_at', $direction);
+    }
+
     public function setFuckAttribute($value)
     {
         $this->attributes['fuck'] = $value;
@@ -64,6 +72,7 @@ class Fuck extends Model
 
     public function formNameAttribute($value)
     {
+        debug($value);
         return $value;
     }
 

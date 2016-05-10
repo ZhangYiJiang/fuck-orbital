@@ -3,14 +3,14 @@
 @section('vars')
   <?php
   $pageTitle = 'Editing Fuck #' . $fuck->id;
-  $bodyClass = 'form';
+  $bodyClass = 'form narrow';
   ?>
 @endsection
 
 @section('content')
   <h1>Editing Fuck #{{ $fuck->id }}</h1>
 
-  {!! Form::model($fuck, ['action' => 'FuckController@update']) !!}
+  {!! Form::model($fuck, ['action' => ['FuckController@update', $fuck->id]]) !!}
     @include('components.errors')
     @include('fuck.form')
 

@@ -3,7 +3,7 @@
 @section('vars')
   <?php
     $pageTitle = 'New Fuck';
-    $bodyClass = 'form';
+    $bodyClass = 'form narrow';
   ?>
 @endsection
 

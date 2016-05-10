@@ -21,7 +21,7 @@ class CreateFucksTable extends Migration
             $table->text('fuck_rendered');
 
             $table->string('token', 100)->nullable();
-            $table->boolean('confirmed')->default('false');
+            $table->boolean('confirmed')->default(FALSE);
 
             $table->timestamp('token_updated')->nullable();
             $table->timestamps();

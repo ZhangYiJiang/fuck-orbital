@@ -3,8 +3,11 @@
 @section('vars')
   <?php
     $pageTitle = 'Fuck #' . $fuck->id;
-    $bodyClass = 'fuck';
+    $bodyClass = 'fuck narrow';
   ?>
 @endsection
 
 
+@section('content')
+  @include('fuck.single')
+@endsection

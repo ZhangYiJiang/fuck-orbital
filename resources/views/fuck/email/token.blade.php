@@ -3,7 +3,7 @@
 <p>Fuck #{{ $fuck->id }}<br>
 Name: {{ $fuck->name }}</p>
 
-{{ $this->fuck_rendered }}
+{!! $this->fuck_rendered  !!}
 
 <p>If that's the case, use these links to <br>
 Edit: <a href="{{ $fuck->link('edit') }}">{{ $fuck->link('edit') }}</a><br>

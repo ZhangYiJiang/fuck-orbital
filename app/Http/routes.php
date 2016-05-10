@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 // Authentication Routes...
 Route::group(['prefix' => 'admin'], function(){
@@ -34,3 +31,4 @@ Route::get('{fuck}/delete', 'FuckController@delete');
 
 Route::get('{fuck}', 'FuckController@show');
 
+Route::get('/', 'HomeController@index');

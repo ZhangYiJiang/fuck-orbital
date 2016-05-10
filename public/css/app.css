@@ -2110,8 +2110,13 @@ input[type="button"].btn-block {
     display: none !important; } }
 
 .container-fluid {
-  max-width: 940px;
-  margin: 0 auto; }
+  max-width: 940px; }
+
+.narrow .container-fluid {
+  max-width: 600px; }
+
+.fuck {
+  margin-bottom: 40px; }
 
 body.home > div.container-fluid > header h1 {
   font-size: 20px;

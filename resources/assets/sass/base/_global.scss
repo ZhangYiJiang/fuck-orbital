@@ -1,4 +1,9 @@
 .container-fluid {
   max-width: 940px;
-  margin: 0 auto;
+}
+
+.narrow {
+  .container-fluid {
+    max-width: 600px
+  }
 }
