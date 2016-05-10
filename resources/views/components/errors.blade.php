@@ -1,4 +1,4 @@
-@unless(empty($errors))
+@if(count($errors) > 0)
   <div class="alert alert-error">
     <ul>
       @foreach ($errors->all() as $error)
@@ -6,4 +6,4 @@
       @endforeach
     </ul>
   </div>
-@endunless
+@endif

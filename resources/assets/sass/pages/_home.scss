@@ -1,6 +1,5 @@
 body.home {
-
-  > div.container-fluid > header {
+  .home-header {
     h1 {
       font-size: 20px;
       text-align: center;
@@ -8,13 +7,49 @@ body.home {
       font-weight: bold;
     }
 
-    .finger {
+    .home-label {
+      font-size: 16px;
+      background: #333;
+      color: #fff;
       display: block;
-      font-size: 300px;
-      font-weight: normal;
+      opacity: 0;
+
+      padding: 6px 10px;
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      transform: translateX(-50%);
+      transition: .4s all;
+    }
+
+    .finger {
+      position: relative;
+      display: block;
+
+      pre {
+        width: 200px;
+        letter-spacing: -3px;
+        margin: 0 auto 0;
+        padding: 80px 0 20px;
+        font-size: 16px;
+        line-height: 1.1;
+        font-family: $font-family-monospace;
+        text-align: left;
+        border: none;
+        transition: padding .3s;
+      }
 
       &:hover {
         text-decoration: none;
+
+        pre {
+          padding: 20px 0 80px;
+        }
+
+        .home-label {
+          bottom: 10px;
+          opacity: 1;
+        }
       }
     }
   }

@@ -28,7 +28,7 @@ nav.global h1 {
       text-decoration: none;
 
       .finger-label {
-        width: 110px;
+        width: 105px;
       }
     }
   }
@@ -36,4 +36,9 @@ nav.global h1 {
 
 a {
   transition: color .3s;
+}
+
+label {
+  color: #999;
+  margin-bottom: 4px;
 }

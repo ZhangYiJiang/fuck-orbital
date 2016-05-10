@@ -1,3 +1,10 @@
+$font-family-sans-serif: Lato, Arial, sans-serif;
 $body-bg: #fffde7;
-$brand-primary: #fbc02d;
+$brand-primary: #f9a825;
 $blockquote-border-color: darken($brand-primary, 10);
+
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
+$input-border-focus: $brand-primary;
