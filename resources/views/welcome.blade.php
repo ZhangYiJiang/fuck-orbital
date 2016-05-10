@@ -36,5 +36,8 @@
       I have fucks to give</a>
     <h1>Latest Fucks</h1>
   </header>
+
   @each('fuck.single', $fucks, 'fuck')
+
+  {!! $fucks->links() !!}
 @endsection

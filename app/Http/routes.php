@@ -14,9 +14,9 @@
 
 // Authentication Routes...
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('admin/login', 'Auth\AuthController@showLoginForm');
-    Route::post('admin/login', 'Auth\AuthController@login');
-    Route::get('logout', 'Auth\AuthController@logout');
+    Route::get('login', 'AuthController@showLoginForm');
+    Route::post('login', 'AuthController@login');
+    Route::get('logout', 'AuthController@logout');
 
     Route::get('/', 'AdminController@index');
 });

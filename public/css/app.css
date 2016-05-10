@@ -2285,6 +2285,11 @@ label {
   color: #999;
   margin-bottom: 4px; }
 
+.pagination {
+  font-size: 24px; }
+  .pagination span {
+    padding: 10px 18px; }
+
 .fuck {
   margin-bottom: 40px; }
   .fuck blockquote {

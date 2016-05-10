@@ -7,15 +7,6 @@ use App\Fuck;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-    }
-
-    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
@@ -24,7 +15,7 @@ class HomeController extends Controller
     {
         $fucks = Fuck::confirmed()
             ->chronological()
-            ->get();
+            ->paginate(10);
 
         return view('welcome', compact('fucks'));
     }
