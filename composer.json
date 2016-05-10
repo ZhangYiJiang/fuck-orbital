@@ -10,7 +10,8 @@
         "graham-campbell/throttle": "^5.2",
         "barryvdh/laravel-ide-helper": "^2.1",
         "laravelcollective/html": "^5.2",
-        "barryvdh/laravel-debugbar": "^2.2"
+        "barryvdh/laravel-debugbar": "^2.2",
+        "graham-campbell/markdown": "^6.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

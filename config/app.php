@@ -152,6 +152,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -210,7 +211,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Throttle' => GrahamCampbell\Throttle\Facades\Throttle::class,
-
+        'Markdown' => \GrahamCampbell\Markdown\Facades\Markdown::class,
     ],
 
 ];
