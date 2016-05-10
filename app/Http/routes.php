@@ -16,8 +16,10 @@ Route::get('/', function () {
 });
 
 // Authentication Routes...
-$this->get('login', 'Auth\AuthController@showLoginForm');
-$this->post('login', 'Auth\AuthController@login');
-$this->get('logout', 'Auth\AuthController@logout');
+Route::group(['prefix' => 'admin'], function(){
+    Route::get('admin/login', 'Auth\AuthController@showLoginForm');
+    Route::post('admin/login', 'Auth\AuthController@login');
+    Route::get('logout', 'Auth\AuthController@logout');
 
-Route::get('/home', 'HomeController@index');
+    Route::get('/', 'AdminController@index');
+});
