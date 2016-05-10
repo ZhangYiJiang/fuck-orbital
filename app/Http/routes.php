@@ -23,3 +23,5 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::get('/', 'AdminController@index');
 });
+
+Route::get('new', 'FuckController@create');

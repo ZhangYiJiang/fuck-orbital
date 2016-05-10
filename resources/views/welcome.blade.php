@@ -1,17 +1,19 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Welcome</div>
+@section('vars')
+  <?php
+    $bodyClass = 'home';
+  ?>
+@endsection
 
-                <div class="panel-body">
-                    Your Application's Landing Page.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@section('header')
+  <header>
+  <h1>Dear Orbital
+  <a href="{{ action('FuckController@create') }}" class="finger">🖕</a>
+    you</h1>
+  </header>
+@endsection
+
+@section('content')
+
 @endsection
