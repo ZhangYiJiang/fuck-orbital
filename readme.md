@@ -1,7 +1,7 @@
 # Fuck Orbital
 
 An CP3108B ("Orbital") project that meets the intermediate level of achievement,
-complected in one day.
+completed in one day.
 
 Goal statement: **Create a website where users can say 'fuck you' to Orbital anonymously.**
 

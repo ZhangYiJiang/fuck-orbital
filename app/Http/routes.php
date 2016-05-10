@@ -29,6 +29,7 @@ Route::group(['middleware' => 'token'], function(){
     Route::get('{fuck}/edit', 'FuckController@edit');
     Route::post('{fuck}/edit', 'FuckController@update');
     Route::get('{fuck}/delete', 'FuckController@delete');
+    Route::post('{fuck}/delete', 'FuckController@trash');
 });
 
 Route::get('{fuck}/token', 'FuckController@token');

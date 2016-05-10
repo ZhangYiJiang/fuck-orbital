@@ -60,9 +60,15 @@ class FuckController extends Controller
                 Use the links in them to edit/delete your fuck");
     }
 
-    public function delete(Fuck $fuck, Request $request)
+    public function delete(Fuck $fuck)
     {
-        
+        return view('fuck.delete', compact('fuck'));
+    }
+    
+    public function trash(Fuck $fuck, Request $request)
+    {
+        $fuck->delete();
+        return redirect('/')->with('success', "Your fuck has been deleted. We're sad to see you go :(");
     }
 
     protected function getRules(array $exclude = []){

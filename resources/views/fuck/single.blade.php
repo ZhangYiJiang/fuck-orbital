@@ -3,6 +3,7 @@
     <blockquote>{!! $fuck->fuck_rendered !!}</blockquote>
 
     <figcaption><span class="name">{{ $fuck->name }}</span> -
-      <span class="timestamp">{{ $fuck->created_at->diffForHumans() }}</span></figcaption>
+      <a href="{{ action('FuckController@show', [$fuck]) }}" class="timestamp">
+        {{ $fuck->created_at->diffForHumans() }}</a></figcaption>
   </figure>
 </div>
