@@ -25,8 +25,9 @@
 <body class="{{ $bodyClass }}">
   <div class="container-fluid">
     @section('header')
-      <nav>
-        <h1><a href="{{ url('/') }}">🖕 Orbital</a></h1>
+      <nav class="global">
+        <h1><a href="{{ url('/') }}"><span class="finger-label">🖕 Fuck</span>
+            <span>Orbital</span></a></h1>
       </nav>
     @show
 

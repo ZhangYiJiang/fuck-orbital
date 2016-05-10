@@ -7,3 +7,33 @@
     max-width: 600px
   }
 }
+
+nav.global h1 {
+  line-height: 1;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  a {
+    .finger-label {
+      width: 20px;
+      overflow: hidden;
+      transition: .3s width;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .finger-label {
+        width: 110px;
+      }
+    }
+  }
+}
+
+a {
+  transition: color .3s;
+}

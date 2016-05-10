@@ -14,6 +14,8 @@
     @include('components.errors')
     @include('fuck.form')
 
+    {!! Form::hidden('token', Request::input('token')) !!}
+
     {!! Form::button('Save Your Fuck', ['type' => 'submit', 'class' => 'btn btn-lg btn-primary']) !!}
     or <a href="{{ action('FuckController@show', [$fuck]) }}">I don't give a fuck</a>
   {!! Form::close() !!}

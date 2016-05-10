@@ -14,6 +14,6 @@
 @endsection
 
 @section('content')
-  <h1>Latest Fucks Given</h1>
+  <h1>Latest Fucks</h1>
   @each('fuck.single', $fucks, 'fuck')
 @endsection

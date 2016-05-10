@@ -2,6 +2,7 @@
 
 namespace App;
 
+use app\Exceptions\TokenExpiredException;
 use Collective\Html\Eloquent\FormAccessible;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Mail\Message;
@@ -16,13 +17,13 @@ class Fuck extends Model
         'confirmed' => 'boolean',
     ];
 
-    protected $dates = ['token_update', ];
+    protected $dates = ['token_updated', ];
 
     protected $fillable = ['name', 'email', 'fuck',];
 
     public function link($action)
     {
-        return action('FuckController@'.$action, [$this]);
+        return action('FuckController@'.$action, [$this, 'token' => $this->token]);
     }
 
     public function refreshToken()
@@ -48,6 +49,15 @@ class Fuck extends Model
         $this->save();
     }
 
+    public function checkToken($token)
+    {
+        if (empty($token) || ! hash_equals($token, $this->token)) {
+            abort(403);
+        } else if ($this->token_updated->diffInMinutes() < 30) {
+            throw new TokenExpiredException($this);
+        }
+    }
+
     public function scopeConfirmed($query, $confirmed = TRUE)
     {
         return $query->where('confirmed', $confirmed);
@@ -55,7 +65,7 @@ class Fuck extends Model
 
     public function scopeChronological($query, $direction = 'DESC')
     {
-        return $query->orderBy('created_at', $direction);
+        return $query->orderBy($this->getCreatedAtColumn(), $direction);
     }
 
     public function setFuckAttribute($value)
@@ -72,7 +82,6 @@ class Fuck extends Model
 
     public function formNameAttribute($value)
     {
-        debug($value);
         return $value;
     }
 
