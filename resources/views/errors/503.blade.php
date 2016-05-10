@@ -1,47 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('vars')
+  <?php
+    $pageTitle = '503';
+    $bodyClass = 'error';
+  ?>
+@endsection
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('content')
+  <h1>Fuck! Something went wrong</h1>
+  <p>Sorry, it's our fault, not yours. Don't worry, the error has been recorded
+    and we'll get to it as soon as possible. In the meantime, why not check out the
+    latest fucks given on our homepage?</p>
+  <p class="text-center"><a href="{{ url('/') }}" class="btn btn-primary btn-lg">
+      Back to Home</a></p>
+@endsection

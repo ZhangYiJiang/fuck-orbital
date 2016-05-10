@@ -214,4 +214,15 @@ return [
         'Markdown' => \GrahamCampbell\Markdown\Facades\Markdown::class,
     ],
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Token expiration
+    |--------------------------------------------------------------------------
+    |
+    | Set the token expiration time limit. Longer time gives user more space
+    | to modify their content without rushing, but may be bad for security
+    |
+    */
+    'token_expiry' => 60,
 ];

@@ -15,4 +15,9 @@ class TokenExpiredException extends Exception
         $this->fuck = $fuck;
         parent::__construct('Token expired', NULL, $previous);
     }
+
+    public function getFuck()
+    {
+        return $this->fuck;
+    }
 }

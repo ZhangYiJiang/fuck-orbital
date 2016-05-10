@@ -53,7 +53,7 @@ class Fuck extends Model
     {
         if (empty($token) || ! hash_equals($token, $this->token)) {
             abort(403);
-        } else if ($this->token_updated->diffInMinutes() > 30) {
+        } else if ($this->token_updated->diffInMinutes() > config('app.token_expiry')) {
             throw new TokenExpiredException($this);
         }
     }

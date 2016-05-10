@@ -45,6 +45,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if ($e instanceof TokenExpiredException) {
+            return response()
+                ->view('errors.expiry', ['fuck' => $e->getFuck()], 403);
+        }
+
         return parent::render($request, $e);
     }
 }
