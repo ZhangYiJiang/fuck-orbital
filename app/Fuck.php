@@ -35,12 +35,12 @@ class Fuck extends Model
 
     public function sendTokenEmail()
     {
-        $this->sendMail('fuck.email.token');
+        $this->sendMail('fuck.email.token', 'Did you ask to edit your fuck?');
     }
 
     public function sendConfirmEmail()
     {
-        $this->sendMail('fuck.email.confirm');
+        $this->sendMail('fuck.email.confirm', 'Please confirm the fuck you have given');
     }
 
     public function confirm()
@@ -85,13 +85,14 @@ class Fuck extends Model
         return $value;
     }
 
-    protected function sendMail($view)
+    protected function sendMail($view, $subject)
     {
         if ( ! $this->refreshToken()) {
             // TODO: Error handling
         } else {
-            Mail::send($view, ['fuck' => $this], function (Message $m) {
+            Mail::send($view, ['fuck' => $this], function (Message $m) use ($subject) {
                 $m->to($this->email);
+                $m->subject($subject);
             });
         }
     }

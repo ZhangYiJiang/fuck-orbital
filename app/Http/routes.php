@@ -31,6 +31,7 @@ Route::group(['middleware' => 'token'], function(){
     Route::get('{fuck}/delete', 'FuckController@delete');
 });
 
+Route::get('{fuck}/token', 'FuckController@token');
 Route::get('{fuck}', 'FuckController@show');
 
 Route::get('/', 'HomeController@index');
