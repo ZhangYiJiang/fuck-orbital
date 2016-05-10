@@ -4,6 +4,10 @@
   blockquote {
     color: #e65100;
     margin-bottom: 6px;
+
+    &.short {
+      font-size: 32px;
+    }
   }
 
   figcaption {

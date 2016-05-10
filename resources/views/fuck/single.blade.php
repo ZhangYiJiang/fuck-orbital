@@ -1,6 +1,7 @@
 <div class="fuck">
   <figure>
-    <blockquote>{!! $fuck->fuck_rendered !!}</blockquote>
+    <blockquote class="{{ strlen($fuck->fuck) > 300 ? 'long' : 'short' }}">
+      {!! $fuck->fuck_rendered !!}</blockquote>
 
     <figcaption><span class="name">{{ $fuck->name }}</span> -
       <a href="{{ action('FuckController@show', [$fuck]) }}" class="timestamp">
