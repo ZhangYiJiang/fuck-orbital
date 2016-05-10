@@ -1,27 +1,25 @@
-# Laravel PHP Framework
+# Fuck Orbital
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+An CP3108B ("Orbital") project that meets the intermediate level of achievement,
+complected in one day.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Goal statement: **Create a website where users can say 'fuck you' to Orbital anonymously.**
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Design Considerations
 
-## Official Documentation
+- Users will be authenticated via email. This will allow Fucks to be modified after they are posted
+ via a token sent to their emails. This keeps user authentication lightweight
+   and easy to use.
+- Names can be attached to Fucks, but kept optional to maintain anonymity
+- An API will be provided to allow Fucks to be consumed by other web applications
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## User workflow
 
-## Contributing
+- User enters Fuck, name (optional) and email.
+- Email is sent to user to verify that they want to post the Fuck with a link with a confirmation token
+  - Tokens expire after 30 min
+- If the user wants to edit the message, a button on the Fuck will send them a new token that will allow them to do this
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Why?
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Because Fuck Orbital
