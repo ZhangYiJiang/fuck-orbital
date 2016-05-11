@@ -220,9 +220,11 @@ return [
     | Token expiration
     |--------------------------------------------------------------------------
     |
-    | Set the token expiration time limit. Longer time gives user more space
+    | Set the token expiration time limit in minutes. Longer time gives user more space
     | to modify their content without rushing, but may be bad for security
     |
     */
-    'token_expiry' => 60,
+    'token_expiry' => env('TOKEN_EXPIRY', 60),
+    
+    
 ];
