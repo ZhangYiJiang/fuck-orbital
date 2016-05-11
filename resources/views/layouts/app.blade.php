@@ -36,7 +36,7 @@
     @yield('content')
 
     <footer class="global">
-      Created by Zhang Yi Jiang.
+      Created by Zhang Yi Jiang. <a href="{{ action('HomeController@doc') }}">Fuck Orbital API</a>.
       <a href="https://github.com/ZhangYiJiang/fuck-orbital">Read more about the motivation,
         the project log or fork us on GitHub!</a>
     </footer>

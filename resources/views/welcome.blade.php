@@ -25,7 +25,8 @@
   </a></h1>
     <p>An Orbital project that meets the intermediate (Gemini) achievement level, created in one day.
       <a href="https://github.com/ZhangYiJiang/fuck-orbital">Read more about the motivation, the project log
-        or fork us on GitHub!</a></p>
+        or fork us on GitHub!</a>. <a href="{{ action('HomeController@doc') }}">API now available</a> for consuming fucks
+        programmatically. </p>
   </header>
 @endsection
 
