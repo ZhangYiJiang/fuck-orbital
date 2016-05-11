@@ -15,7 +15,7 @@ class AdminController extends Controller
     }
 
     public function index() {
-        $fucks = Fuck::chronological()->paginate(30);
+        $fucks = Fuck::chronological()->paginate(10);
 
         return view('admin.index', compact('fucks'));
     }

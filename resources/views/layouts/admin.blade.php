@@ -12,7 +12,6 @@
 @endpush
 
 @section('header')
-  <a href="{{ action('AuthController@logout') }}" class="btn btn-primary pull-right">Logout</a>
   @parent
 
 @endsection

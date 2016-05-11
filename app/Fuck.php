@@ -21,6 +21,8 @@ class Fuck extends Model
 
     protected $fillable = ['name', 'email', 'fuck',];
 
+    protected $visible = ['id', 'name', 'fuck', 'created_at',];
+
     public function link($action)
     {
         return action('FuckController@'.$action, [$this, 'token' => $this->token]);
