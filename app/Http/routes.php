@@ -21,6 +21,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/', 'AdminController@index');
 });
 
+Route::get('api/v1/docs/{page?}', 'HomeController@doc');
+
 Route::get('new', 'FuckController@create');
 Route::post('new', 'FuckController@store');
 

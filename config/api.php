@@ -15,5 +15,10 @@ return [
     'pagesize' => [
         'max' => 100,
         'default' => 30,
-    ], 
+    ],
+
+    'vectorized' => [
+        'max' => 30,
+    ],
+    
 ];

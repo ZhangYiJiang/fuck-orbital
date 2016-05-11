@@ -21,7 +21,7 @@ class Fuck extends Model
 
     protected $fillable = ['name', 'email', 'fuck',];
 
-    protected $visible = ['id', 'name', 'fuck', 'created_at',];
+    protected $visible = ['id', 'name', 'fuck_rendered', 'created_at',];
 
     public function link($action)
     {

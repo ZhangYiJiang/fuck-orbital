@@ -1,0 +1,27 @@
+body.docs {
+  header {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid $brand-primary;
+
+    h2 {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 0 6px 0;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 32px;
+    }
+  }
+
+  .endpoint {
+    font-family: $font-family-monospace;
+    text-decoration: underline;
+  }
+
+  .optional {
+    font-weight: bold;
+  }
+}

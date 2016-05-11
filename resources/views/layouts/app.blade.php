@@ -34,9 +34,12 @@
     @show
 
     @yield('content')
-  </div>
 
-  <!-- JavaScripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+    <footer class="global">
+      Created by Zhang Yi Jiang.
+      <a href="https://github.com/ZhangYiJiang/fuck-orbital">Read more about the motivation,
+        the project log or fork us on GitHub!</a>
+    </footer>
+  </div>
 </body>
 </html>

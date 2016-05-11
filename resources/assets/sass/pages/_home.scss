@@ -33,10 +33,9 @@ body.home {
         padding: 80px 0 20px;
         font-size: 16px;
         line-height: 1.1;
-        font-family: $font-family-monospace;
-        text-align: left;
         border: none;
         transition: padding .3s;
+        background: none;
       }
 
       &:hover {

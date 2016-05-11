@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Fuck;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -27,6 +28,16 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot($router);
+
+        $router->bind('fuck_vector', function($value) {
+            $max = config('api.vectorized.max');
+            $ids = explode(';', $value, $max + 1);
+            $ids = array_slice($ids, 0, $max);
+
+            return Fuck::whereIn('id', $ids)
+                ->confirmed()
+                ->get();
+        });
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Fuck;
+use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
 {
@@ -19,4 +20,17 @@ class HomeController extends Controller
 
         return view('welcome', compact('fucks'));
     }
+
+    public function doc($page = 'index')
+    {
+        $view = "docs.$page";
+
+        if ( ! view()->exists($view)) {
+            abort(404);
+        } else {
+            return view($view);
+        }
+    }
+
+
 }

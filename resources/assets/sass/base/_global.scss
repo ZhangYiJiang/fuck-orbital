@@ -34,6 +34,12 @@ nav.global h1 {
   }
 }
 
+footer.global {
+  margin-top: 40px;
+  padding: 10px;
+  border-top: 1px solid $brand-primary;
+}
+
 a {
   transition: color .3s;
 }
@@ -49,4 +55,9 @@ label {
   span {
     padding: 10px 18px;
   }
+}
+
+.label {
+  border-radius: 0;
+  padding-bottom: 1px;
 }
