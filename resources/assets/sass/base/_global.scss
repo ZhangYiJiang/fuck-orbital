@@ -17,8 +17,8 @@ nav.global h1 {
   }
 
   a {
-    .finger-label {
-      width: 20px;
+    .word-fuck {
+      width: 0;
       overflow: hidden;
       transition: .3s width;
       white-space: nowrap;
@@ -27,8 +27,8 @@ nav.global h1 {
     &:hover {
       text-decoration: none;
 
-      .finger-label {
-        width: 105px;
+      .word-fuck {
+        width: 75px;
       }
     }
   }

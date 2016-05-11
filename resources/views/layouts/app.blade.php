@@ -6,13 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php
-      if (empty($pageTitle)) {
-        $pageTitleText = '🖕 Fuck Orbital';
-      } else {
-        $pageTitleText = $pageTitle . ' | 🖕 Fuck Orbital';
-      }
-    ?>
+    <?php $pageTitleText = empty($pageTitle) ? '🖕 Fuck Orbital' : $pageTitle . ' | 🖕 Fuck Orbital'; ?>
     <title>{{ $pageTitleText }}</title>
 
     <!-- Fonts -->
@@ -31,8 +25,11 @@
           <a href="{{ action('AuthController@logout') }}" class="btn btn-primary pull-right">Logout</a>
           <a href="{{ action('AdminController@index') }}" class="btn btn-primary pull-right">Admin</a>
         @endif
-          <h1><a href="{{ url('/') }}"><span class="finger-label">🖕 Fuck</span>
-            <span>Orbital</span></a></h1>
+          <h1><a href="{{ url('/') }}">
+              <span class="finger-label">🖕</span>
+              <span class="word-fuck">Fuck</span>
+              <span>Orbital</span></a>
+          </h1>
       </nav>
     @show
 

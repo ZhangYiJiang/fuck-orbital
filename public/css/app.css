@@ -2268,15 +2268,15 @@ nav.global h1 {
   nav.global h1 span {
     display: inline-block;
     vertical-align: middle; }
-  nav.global h1 a .finger-label {
-    width: 20px;
+  nav.global h1 a .word-fuck {
+    width: 0;
     overflow: hidden;
     transition: .3s width;
     white-space: nowrap; }
   nav.global h1 a:hover {
     text-decoration: none; }
-    nav.global h1 a:hover .finger-label {
-      width: 105px; }
+    nav.global h1 a:hover .word-fuck {
+      width: 75px; }
 
 a {
   transition: color .3s; }
