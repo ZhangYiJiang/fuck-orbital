@@ -15,7 +15,11 @@ class CheckFuckToken
      */
     public function handle($request, Closure $next)
     {
-        $request->route('fuck')->checkToken($request->input('token'));
+        // Only check if user is not admin
+        if (empty($request->user())) {
+            $request->route('fuck')->checkToken($request->input('token'));
+        }
+        
         return $next($request);
     }
 }

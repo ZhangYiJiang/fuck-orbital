@@ -1,0 +1,20 @@
+body.admin .fuck {
+  border-bottom: 1px solid rgba(249, 168, 37, 0.5);
+  margin-bottom: 0; }
+  body.admin .fuck .markdown {
+    padding: 20px 20px 10px;
+    background: rgba(249, 168, 37, 0.2); }
+  body.admin .fuck .meta {
+    padding: 10px 20px;
+    background: rgba(249, 168, 37, 0.1);
+    overflow: hidden;
+    font-weight: bold; }
+  body.admin .fuck .info {
+    float: left;
+    margin: 3px 0 0 0; }
+  body.admin .fuck .action {
+    float: right; }
+    body.admin .fuck .action a {
+      padding: 1px 6px 2px; }
+
+/*# sourceMappingURL=admin.css.map */

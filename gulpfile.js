@@ -12,7 +12,7 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss').browserSync({
+    mix.sass('app.scss').sass('admin.scss').browserSync({
       proxy: 'http://localhost:8000', 
     });
 });

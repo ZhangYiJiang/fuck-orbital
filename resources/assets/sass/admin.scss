@@ -1,0 +1,35 @@
+@import "base/variables";
+
+body.admin {
+  .fuck {
+    border-bottom: 1px solid rgba($brand-primary, .5);
+    margin-bottom: 0;
+
+    .markdown {
+      padding: 20px 20px 10px;
+      background: rgba($brand-primary, .2);
+    }
+
+    .meta {
+      padding: 10px 20px;
+      background: rgba($brand-primary, .1);
+      overflow: hidden;
+      font-weight: bold;
+
+    }
+
+    .info {
+      float: left;
+      margin: 3px 0 0 0;
+    }
+
+    .action {
+      float: right;
+
+      a {
+        padding: 1px 6px 2px;
+      }
+    }
+  }
+
+}
