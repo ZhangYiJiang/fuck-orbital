@@ -39,8 +39,6 @@ class FuckController extends Controller
 
     public function edit(Fuck $fuck)
     {
-        // Refresh token when editing so the user won't run out of time
-        $fuck->refreshToken();
         return view('fuck.edit', compact('fuck'));
     }
 
@@ -66,8 +64,6 @@ class FuckController extends Controller
 
     public function delete(Fuck $fuck)
     {
-        // Refresh token before deleting so the user won't run out of time
-        $fuck->refreshToken();
         return view('fuck.delete', compact('fuck'));
     }
     
